@@ -9,6 +9,10 @@
 <body>
 
 <h2>ZHU Alias Reference</h2>
+
+<input type="text" class="search" id="searchBox" placeholder="Search...">
+<button class="search" id="searchBox" onclick="searchFunction()">Go</button>
+
 <h3>VATSIM/CRC Basics</h3>
 <button class="collapsible"><span class="arrow">►</span> Pilot Help Messages</button>
 <div class="content">
@@ -460,22 +464,93 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
+        var coll = document.getElementsByClassName('collapsible');
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener('click', function() {
+                this.classList.toggle('active');
                 var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                    content.style.display = "none";
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
                 } else {
-                    content.style.display = "block";
+                    content.style.display = 'block';
                 }
             });
         }
+
+        var searchInput = document.getElementById('searchBox');
+        searchInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchFunction();
+            }
+        });
     });
+
+    function searchFunction() {
+        var input = document.getElementById('searchBox');
+        var filter = input.value.toLowerCase();
+        var coll = document.getElementsByClassName('collapsible');
+        var contentDivs = document.getElementsByClassName('content');
+
+        // Collapse all sections and remove previous highlights
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].classList.remove('active');
+            var content = coll[i].nextElementSibling;
+            content.style.display = 'none';
+            removeHighlights(content);
+        }
+
+        if (filter) {
+            // Highlight new search terms and expand sections with matches
+            for (var i = 0; i < contentDivs.length; i++) {
+                if (highlightText(contentDivs[i], filter)) {
+                    // If a match is found, expand the collapsible section
+                    var button = contentDivs[i].previousElementSibling;
+                    button.classList.add('active');
+                    contentDivs[i].style.display = 'block';
+                }
+            }
+        }
+    }
+
+    function highlightText(element, query) {
+        var textNodes = getTextNodes(element);
+        var found = false;
+        textNodes.forEach(function(node) {
+            var value = node.nodeValue.toLowerCase();
+            var startIndex = value.indexOf(query);
+            if (startIndex !== -1) {
+                found = true;
+                var span = document.createElement('span');
+                span.className = 'highlight';
+                var range = document.createRange();
+                range.setStart(node, startIndex);
+                range.setEnd(node, startIndex + query.length);
+                range.surroundContents(span);
+            }
+        });
+        return found;
+    }
+
+    function removeHighlights(element) {
+        var highlightedElements = element.querySelectorAll('.highlight');
+        highlightedElements.forEach(function(highlight) {
+            var parent = highlight.parentNode;
+            parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+            parent.normalize();
+        });
+    }
+
+    function getTextNodes(element) {
+        var textNodes = [];
+        var walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+        var node;
+        while (node = walker.nextNode()) {
+            textNodes.push(node);
+        }
+        return textNodes;
+    }
 </script>
+
 
 </body>
 </html>
