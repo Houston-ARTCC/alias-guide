@@ -44,6 +44,12 @@ body {
     border-radius: 10px;
 }
 
+.icon {
+    width: 20px;
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
 .command {
     font-family: 'Courier New', Courier, monospace;
 }
