@@ -8,8 +8,8 @@
 </head>
 <body>
 
-<h1>ZHU Alias Reference</h1>
-<p style="font-style: italic; font-size: smaller; margin-top: -15px;">Updated: May 29, 2024</p>
+<h2>ZHU Alias Reference</h2>
+<p style="font-style: italic; font-size: smaller; margin-top: -15px;">Updated: May 31, 2024<br>New: Local <span class="code">.ctotl</span> and <span class="code">.ctotr</span>.</p>
 
 <input type="text" class="search" id="searchBox" placeholder="Search...">
 <button class="search" id="searchBox" onclick="searchFunction()">Go</button>
@@ -131,11 +131,11 @@
 <button class="collapsible"><span class="arrow">►</span> Approach Plate Recall</button>
 <div class="content">
     <p>All chart recall commands open the selected FAA chart in your computer's default browser.</p>
-    <p><img class="icon" src="images/warning.png"><b>Note: if an approach variation [A/B/C, W/X/Y/Z] and/or runway side designator [L/R/C] is used, the leading digit of the runway is ommited (see examples).</b></p>
+    <p><img class="icon" src="images/warning.png"><b>Note: if an approach variation or runway side designator is used, the leading digit of the runway is ommited (see examples).</b></p>
     <p><span class="command" style="font-size: larger;">.[AIRPORT][APPROACH CODE]([VARIATION])[RUNWAY]([L/R/C])</span></p>
     <table>
         <thead>
-            <tr><th>Approach</th><th>Code</th><th>Approach</th><th>Code</th></tr>
+            <tr><th>Approach Type</th><th>Code</th><th>Approach Type</th><th>Code</th></tr>
         </thead>
         <tbody>
             <tr><td>ILS</td><td class="command">I</td><td>LOC/DME</td><td class="command">K</td></tr>
@@ -227,8 +227,7 @@
 
 <button class="collapsible"><span class="arrow">►</span> Airway Recall (ERAM)</button>
 <div class="content">
-    <p>Route points are highlighted on the scope.</p>
-    <p><img class="icon" src="images/warning.png"><b>Note: ERAM only.</b></p>
+    <p>Route points are highlighted on the scope. <img class="icon" src="images/warning.png"><b>ERAM only.</b></p>
     <p><span class="command" style="font-size: larger;">.[AIRWAY]F</span></p>
     <table>
         <thead>
@@ -318,7 +317,7 @@
     </table>
 </div>
 
-<button class="collapsible"><span class="arrow">►</span> Local</button>
+<button class="collapsible" name="Local"><span class="arrow">►</span> Local</button>
 <div class="content">
     <p>Syntax: Type callsign and press aircraft select (default in CRC is <span class="code">Numpad Add</span>). Type alias command with any needed variables and press Enter. Alias commands are not case-sensitive.</p>
     <table>
@@ -330,6 +329,8 @@
             <tr><td class="command">.cto $1</td><td class="command">.cto 22</td><td>"Runway 22, cleared for takeoff. Wind <span class="code">current wind</span>.”
             <tr><td class="command">.ctorh $1</td><td class="command">.ctorh 4</td><td>"Fly runway heading, runway 4, cleared for takeoff. Wind <span class="code">current wind</span>.”
             <tr><td class="command">.ctohdg $1 $2</td><td class="command">.ctohdg 36R 030</td><td>"Fly heading 030, runway 36R, cleared for takeoff. Wind <span class="code">current wind</span>.”
+            <tr style="background-color: greenyellow; color: black;"><td class="command">.ctotl $1 $2</td><td class="command">.ctotl 18L 150</td><td>"Turn left heading 150, runway 18R, cleared for takeoff. Wind <span class="code">current wind</span>.”
+            <tr style="background-color: greenyellow; color: black;"><td class="command">.ctotr $1 $2</td><td class="command">.ctotr 15R 300</td><td>"Turn right heading 300, runway 15R, cleared for takeoff. Wind <span class="code">current wind</span>.”
             <tr><td class="command">.ctor $1 $2</td><td class="command">.ctor 15L SCAMM</td><td>"RNAV to SCAMM, runway 15L, cleared for takeoff. Wind <span class="code">current wind</span>.”
             <tr><td class="command">.ctomrt $1</td><td class="command">.ctomrt 11</td><td>"Make right traffic, runway 11, cleared for takeoff. Wind <span class="code">current wind</span>.”
             <tr><td class="command">.ctomlt $1</td><td class="command">.ctolt 29</td><td>"Make left traffic, runway 29, cleared for takeoff. Wind <span class="code">current wind</span>.”
