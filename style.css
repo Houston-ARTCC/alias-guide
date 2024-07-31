@@ -2,7 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.75em;
     background-color: #222;
-    color: #ccc;
+    color: #fff;
 }
 
 .collapsible {
@@ -10,7 +10,7 @@ body {
     display: flex;
     background-color: #25337b;
     border-radius: 10px;
-    color: #ccc;
+    color: #fff;
     cursor: pointer;
     padding: 10px;
     margin-top: 2px;
@@ -40,6 +40,7 @@ body {
 }
 
 .search {
+    margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 10px;
