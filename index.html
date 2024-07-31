@@ -9,12 +9,26 @@
 <body>
 
 <h2>ZHU Alias Reference</h2>
-<p style="font-style: italic; font-size: smaller; margin-top: -15px;">Updated: July 31, 2024<br>New: Miscellaneous <span class="code">.h, .who, .ltx, .lasttx, .alias, .rvm</span></p>
+<p style="font-style: italic; font-size: smaller; margin-top: -15px;">Updated: July 31, 2024<br>New: CRC/ZHU Basics <span class="code">.h, .who, .ltx, .lasttx, .alias, .rvm</span></p>
 
 <input type="text" class="search" id="searchBox" placeholder="Search...">
 <button class="search" id="searchBox" onclick="searchFunction()">Go</button>
 
 <h3>VATSIM/CRC Basics</h3>
+<button class="collapsible"><span class="arrow">►</span> CRC/ZHU Basics</button>
+<div class="content">
+    <table>
+        <thead>
+            <tr><th>Command</th><th>Returns</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.alias</td><td>Opens ZHU Alias Reference website.</td></tr>
+            <tr><td class="command">.rvm</td><td>COMING SOON: Opens ZHU Radar Vector Map website.</td></tr>
+            <tr><td class="command">.h<br>.who<br>.ltx<br>.lasttx</td><td>Issues the CRC built-in last transmission command.</td></tr>
+        </tbody>
+    </table>
+</div>
+
 <button class="collapsible"><span class="arrow">►</span> Pilot Help Messages</button>
 <div class="content">
     <p>Syntax: Type callsign and press aircraft select (default in CRC is <span class="code">Numpad Add</span>). Type the alias command (not case-sensitive) and press Enter. All pilot help commands send a private message to the pilot.</p>
@@ -430,9 +444,6 @@
             <tr><th>Command</th><th>Example</th><th>Returns</th></tr>
         </thead>
         <tbody>
-            <tr><td class="command">.alias</td><td></td><td>Opens ZHU Alias Reference website.</td></tr>
-            <tr><td class="command">.rvm</td><td></td><td>COMING SOON: Opens ZHU Radar Vector Map website.</td></tr>
-            <tr><td class="command">.h<br>.who<br>.ltx<br>.lasttx</td><td></td><td>Issues the CRC built-in last transmission command.</td></tr>
             <tr><td class="command">.ho NEXTID</td><td class="command">.ho 81</td><td>"Contact HOU_81_CTR on 132.425, have a good flight!"</td></tr>
             <tr><td class="command">.hodep DEPID</td><td class="command">.hodep 1D</td><td>"Contact Departure 120.05. Cya!”</td></tr>
             <tr><td class="command">.depoff</td><td class="command"></td><td>No departure control available, monitor unicom 122.8, Thanks for flying!</td></tr>
