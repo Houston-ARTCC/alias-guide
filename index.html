@@ -133,7 +133,7 @@
 <button class="collapsible"><span class="arrow">►</span> Approach Plate Recall</button>
 <div class="content">
     <p>All chart recall commands open the selected FAA chart in your computer's default browser.</p>
-    <p><img class="icon" src="images/warning.png"><b>Note: if an approach variation or runway side designator is used, the leading digit of the runway is ommited (see examples).</b></p>
+    <p><img class="icon" src="images/warning.png"><b>Note: Single digit runways include a leading 0 UNLESS a sidedness designator is used (i.e. IAH 09, IAH 8R). If a double-digit runway includes sidedness, the leading digit is omitted. (i.e. IAH 27, IAH 6L).</b></p>
     <p><span class="command" style="font-size: larger;">.[AIRPORT][APPROACH CODE]([VARIATION])[RUNWAY]([L/R/C])</span></p>
     <table>
         <thead>
@@ -154,7 +154,9 @@
         </thead>
         <tbody>
             <tr><td class="command">.IAHI8L</td><td>Houston Intercon ILS 8L</td></tr>
+            <tr><td class="command">.IAHI09</td><td>Houston Intercon ILS 9</td></tr>
             <tr><td class="command">.IAHI27</td><td>Houston Intercon ILS 27</td></tr>
+            <tr><td class="command">.IAHRZ27</td><td>Houston Intercon RNAV-Z 27</td></tr>
             <tr><td class="command">.GPTOY4</td><td>Gulfport VOR-Y 14</td></tr>
             <tr><td class="command">.GPTTZ4</td><td>Gulfport TACAN Z 14</td></tr>
             <tr><td class="command">.CRPRZ1</td><td>Corpus Christi RNAV-Z 31</td></tr>
