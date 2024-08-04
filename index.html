@@ -8,13 +8,27 @@
 </head>
 <body>
 
-<h2>ZHU Alias Reference</h2>
-<p style="font-style: italic; font-size: smaller; margin-top: -15px;">Updated: July 8, 2024<br>New: Clearance Delivery <span class="code">.faroute</span></p>
+<h2><img src="images/zhu-logo.png" style="float: left; width: 100px; margin-right: 10px; border-radius: 10px;">Alias Reference</h2>
+<p style="font-style: italic; font-size: smaller; margin-top: -15px;">Updated: July 31, 2024<br>New: CRC/ZHU Basics <span class="code">.h, .who, .ltx, .lasttx, .alias, .rvm</span></p>
 
-<input type="text" class="search" id="searchBox" placeholder="Search...">
+<p><input type="text" class="search" id="searchBox" placeholder="Search...">
 <button class="search" id="searchBox" onclick="searchFunction()">Go</button>
 
 <h3>VATSIM/CRC Basics</h3>
+<button class="collapsible"><span class="arrow">►</span> CRC/ZHU Basics</button>
+<div class="content">
+    <table>
+        <thead>
+            <tr><th>Command</th><th>Returns</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.alias</td><td>Opens ZHU Alias Reference website.</td></tr>
+            <tr><td class="command">.rvm</td><td>COMING SOON: Opens ZHU Radar Vector Map website.</td></tr>
+            <tr><td class="command">.h<br>.who<br>.ltx<br>.lasttx</td><td>Issues the CRC built-in last transmission command.</td></tr>
+        </tbody>
+    </table>
+</div>
+
 <button class="collapsible"><span class="arrow">►</span> Pilot Help Messages</button>
 <div class="content">
     <p>Syntax: Type callsign and press aircraft select (default in CRC is <span class="code">Numpad Add</span>). Type the alias command (not case-sensitive) and press Enter. All pilot help commands send a private message to the pilot.</p>
