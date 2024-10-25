@@ -327,14 +327,14 @@
             <tr><th>Command</th><th>Example</th><th>Returns</th></tr>
         </thead>
         <tbody>
-            <tr><td class="command">.td $1 $2 $3 ...</td><td class="command">.td 18L G2 G B</td><td>Departure taxi: "Runway 18L, taxi via G2 G B.”</td></tr>
-            <tr><td class="command">.ta $1 $2 $3 ...</td><td class="command">.ta L A H G3</td><td>Arrival taxi: "Taxi via L A H G3 to the ramp.”</td></tr>
+            <tr><td class="command">.td $1 $2...</td><td class="command">.td 18L G2 G B</td><td>Departure taxi: "Runway 18L, taxi via G2 G B”</td></tr>
+            <tr><td class="command">.ta $1 $2...</td><td class="command">.ta L A H G3</td><td>Arrival taxi: "Taxi to the ramp via L A H G3”</td></tr>
             <tr><td class="command">.tapd</td><td class="command"></td><td>"Taxi to the ramp at pilot's discretion, cross all runways.”</td></tr>
             <tr><td class="command">.hs $1</td><td class="command">.hs H</td><td>"Hold short H.”</td></tr>
             <tr><td class="command">.hp</td><td class="command"></td><td>"Hold position.”</td></tr>
             <tr><td class="command">.ct</td><td class="command"></td><td>"Continue taxi.”</td></tr>
-            <tr><td class="command">.gwt $1</td><td class="command">.gwt the A320 on G<br>.gwt the Cessna on A</td><td>"Give way to the A320 on G.”<br>"Give way to the Cessna on A.”</td></tr>
-            <tr><td class="command">.crs $1</td><td class="command">.crs 15L</td><td>"Cross runway 15L.”</td></tr>        
+            <tr><td class="command">.gwt $1...</td><td class="command">.gwt the A320 on G<br>.gwt the Cessna crossing right to left</td><td>"Give way to the A320 on G”<br>"Give way to the Cessna crossing left to right”</td></tr>
+            <tr><td class="command">.crs $1...</td><td class="command">.crs 15L</td><td>"Cross runway 15L”</td></tr>        
         </tbody>
     </table>
 </div>
