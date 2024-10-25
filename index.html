@@ -347,26 +347,26 @@
             <tr><th>Command</th><th>Example</th><th>Returns</th></tr>
         </thead>
         <tbody>
-            <tr><td class="command">.ctl $1</td><td class="command">.ctl 26R</td><td>"Runway 26R, cleared to land. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.cto $1</td><td class="command">.cto 22</td><td>"Runway 22, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.ctorh $1</td><td class="command">.ctorh 4</td><td>"Fly runway heading, runway 4, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.ctohdg $1 $2</td><td class="command">.ctohdg 36R 030</td><td>"Fly heading 030, runway 36R, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.ctotl $1 $2</td><td class="command">.ctotl 18L 150</td><td>"Turn left heading 150, runway 18R, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr></tr><td class="command">.ctotr $1 $2</td><td class="command">.ctotr 15R 300</td><td>"Turn right heading 300, runway 15R, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.ctor $1 $2</td><td class="command">.ctor 15L SCAMM</td><td>"RNAV to SCAMM, runway 15L, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.ctomrt $1</td><td class="command">.ctomrt 11</td><td>"Make right traffic, runway 11, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.ctomlt $1</td><td class="command">.ctolt 29</td><td>"Make left traffic, runway 29, cleared for takeoff. Wind <span class="code">current wind</span>.”
-            <tr><td class="command">.ctoc</td><td></td><td>"Cancel takeoff clearance.”
-            <tr><td class="command">.gafpm</td><td></td><td>"Go around, fly the published missed approach.”
-            <tr><td class="command">.gavec $1 $2 NEXTID</td><td class="command">.gavec 180 3000 1W</td><td>"Go around. Fly heading 180, maintain 3000, contact <span class="code">1W freq</span>.”
-            <tr><td class="command">.luaw $1</td><td class="command">.luaw 13R</td><td>"Runway 13R, line up and wait.”
+            <tr><td class="command">.ctl $1</td><td class="command">.ctl 26R</td><td>"Runway 26R, cleared to land. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.cto $1</td><td class="command">.cto 22</td><td>"Runway 22, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctorh $1</td><td class="command">.ctorh 4</td><td>"Fly runway heading, runway 4, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctohdg $1 $2</td><td class="command">.ctohdg 36R 030</td><td>"Fly heading 030, runway 36R, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctotl $1 $2</td><td class="command">.ctotl 18L 150</td><td>"Turn left heading 150, runway 18R, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctotr $1 $2</td><td class="command">.ctotr 15R 300</td><td>"Turn right heading 300, runway 15R, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctor $1 $2</td><td class="command">.ctor 15L SCAMM</td><td>"RNAV to SCAMM, runway 15L, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctomrt $1</td><td class="command">.ctomrt 11</td><td>"Make right traffic, runway 11, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctomlt $1</td><td class="command">.ctolt 29</td><td>"Make left traffic, runway 29, cleared for takeoff. Wind <span class="code">current wind</span>.”</td></tr>
+            <tr><td class="command">.ctoc</td><td></td><td>"Cancel takeoff clearance.”</td></tr>
+            <tr><td class="command">.gafpm</td><td></td><td>"Go around, fly the published missed approach.”</td></tr>
+            <tr><td class="command">.gavec $1 $2 NEXTID</td><td class="command">.gavec 180 3000 1W</td><td>"Go around. Fly heading 180, maintain 3000, contact <span class="code">1W freq</span>.”</td></tr>
+            <tr><td class="command">.luaw $1</td><td class="command">.luaw 13R</td><td>"Runway 13R, line up and wait.”</td></tr>
             <tr><td class="command">.wel $1 $2</td><td class="command">.wel Austin L<br>.wel AUS right</td><td>"Welcome to Austin, exit L when able.”<br>"Welcome to AUS, exit right when able.”</td></tr>
-            <tr><td class="command">.xrhs $1 $2 $3</td><td class="command">.xrhs 8R NA ground</td><td>"Cross runway 8R, hold short NA, contact ground on the other side.”
-            <tr><td class="command">.xr $1 $2</td><td class="command">.xr 26L ramp</td><td>"Cross runway 26L, contact ramp on the other side.”
-            <tr><td class="command">.elb $1</td><td class="command">.elb 18L</td><td>"Enter left base runway 18L.”
-            <tr><td class="command">.erb $1</td><td class="command">.erb 18R</td><td>"Enter right base runway 18R.”
-            <tr><td class="command">.erd $1</td><td class="command">.erd 22</td><td>"Enter right downwind runway 22.”
-            <tr><td class="command">.eld $1</td><td class="command">.eld 4</td><td>"Enter left downwind runway 4.”
+            <tr><td class="command">.xrhs $1 $2 $3</td><td class="command">.xrhs 8R NA ground</td><td>"Cross runway 8R, hold short NA, contact ground on the other side.”</td></tr>
+            <tr><td class="command">.xr $1 $2</td><td class="command">.xr 26L ramp</td><td>"Cross runway 26L, contact ramp on the other side.”</td></tr>
+            <tr><td class="command">.elb $1</td><td class="command">.elb 18L</td><td>"Enter left base runway 18L.”</td></tr>
+            <tr><td class="command">.erb $1</td><td class="command">.erb 18R</td><td>"Enter right base runway 18R.”</td></tr>
+            <tr><td class="command">.erd $1</td><td class="command">.erd 22</td><td>"Enter right downwind runway 22.”</td></tr>
+            <tr><td class="command">.eld $1</td><td class="command">.eld 4</td><td>"Enter left downwind runway 4.”</td></tr>
         </tbody>
     </table>
 </div>
