@@ -32,26 +32,108 @@
 <button class="collapsible"><span class="arrow">►</span> Pilot Help Messages</button>
 <div class="content">
     <p>Syntax: Type callsign and press aircraft select (default in CRC is <span class="code">Numpad Add</span>). Type the alias command (not case-sensitive) and press Enter. All pilot help commands send a private message to the pilot.</p>
-    <img src="images/pilothelp.png"></p>
     <table>
         <thead>
-            <tr><th>Command</th><th>Situation</th><th>Returns</th></tr>
+            <tr><th colspan="2">WALLOPs</th></tr>
         </thead>
         <tbody>
-            <tr><td class="command">.callsign</td><td>Callsign: incorrect or inappropriate</td><td>"Hello! We noticed your aircraft callsign is inconsistent with VATSIM policy. Please visit the Pilot Learning Center for callsign guidelines the next time you login. Thanks! https://my.vatsim.net/learn/vatsim-basics/section/112."</td></tr>
-            <tr><td class="command">.iafdof</td><td>Cruise Altitude: wrong for direction</td><td>"Hello! Your filed or current cruising altitude is not correct for your direction of flight. Aircraft flying at cruise between 000-179 degrees should be at ODD cruise altitudes. Aircraft flying at cruise between 180-359 degrees should be at EVEN cruise altitudes. This provides a nationwide system to separate aircraft vertically. Thanks!"</td></tr>
-            <tr><td class="command">.nordo</td><td>NORDO</td><td>"Hello, you have not contacted the appropriate air traffic control facility yet. VATSIM Pilot Code of Conduct rule B3(a) says pilots are responsible for contacting appropriate air traffic controllers that are online. Pilots should regularly check your pilot client controller list to see when controllers sign on or off. If you are unsure of when you should contact a controller, please check out this guide on the VATSIM Pilot Learning Center: https://my.vatsim.net/learn/vatsim-basics/section/120"</td></tr>
-            <tr><td class="command">.newpilot</td><td>Unfamiliar with VATSIM guidelines/ops</td><td>"Hello! It seems like you might be having difficulty on the VATSIM network. There are many resources available to help pilots on the VATSIM Pilot Learning Center https://vats.im/prc. We recommend you review those resources before your next flight to further enhance your experience on the network."</td></tr>
-            <tr><td class="command">.newaircraft</td><td>Unfamiliar with aircraft systems/ops</td><td>"Hello, it looks like you might be having some difficulty operating your aircraft on the network. While we understand some aircraft may be more complex than others, pilots are expected under VATSIM Code of Conduct to B8(c) to promptly comply with basic air traffic control instructions that are applicable to their flight rules. So that everyone (including yourself!) can have a good experience online, consider taking time to get familiar with your aircraft offline and review any needed aircraft documentation or training materials before your next flight. Thanks!"</td></tr>
-            <tr><td class="command">.airspace</td><td>Busting airspace</td><td>"Hello, you appear to be inside controlled airspace and have not contacted ATC for clearance into that airspace. Please reference your simulator maps, GPS map airspace overlays, and VFR sectional charts to know where airspaces lie, their various altitudes, and their classification. Entering controlled airspace without contacting ATC is considered a violation of Pilot Code of Conduct rule B8(b). Thank you!"</td></tr>
-            <tr><td class="command">.dephdg</td><td>Departure: wrong direction of turn</td><td>"Hello, it looks like you make the wrong direction of turn on departure. Houston is among a list of airports in the United States that often involve a turn of +180 degrees to a heading on departure. Aircraft FMS and autopilot heading select systems are factory-programmed to command a turn in the shortest direction (left vs. right) to the selected heading when engaged. Next time, try setting your aircraft’s automation to an intermediate heading in the direction you are instructed to turn (left or right 90 degrees, for example). Then when airborne, engage automation and when turning in the correct direction, continue adjusting towards the final heading. Thanks!"</td></tr>
-            <tr><td class="command">.lateturn</td><td>Departure: late turn</td><td>"Hello! Please keep in mind that when assigned a heading on departure, the turn should be started *AT* the altitude listed on your SID or Obstacle Departure Procedure (if one is available for your airport) OR 400' above airport level (use of the Radar Altimeter readout is acceptable to determine this). When assigned a heading to fly after departure, please start your turn at the appropriate time to avoid traffic conflicts. Thanks!"</td></tr>
-            <tr><td class="command">.routewrong</td><td>Flight Plan: inconsistences or unneeded info</td><td>"Hello, I see you have included some items in your flight plan's route that may not be correct or are not needed. Pilots do not need to include the departure airport, arrival airport, or planned departure or arrival runways in the route section. Runways are assigned by ATC (if online) and the departure and arrival airports are already in your flight plan. We have corrected your routing so there is no need to refile this flight plan. Thanks, and enjoy your flight!"</td></tr>
-            <tr><td class="command">.flightlevel</td><td>Altitudes: FL vs altitude</td><td>"Hello! For reference, altitudes are said as "Flight Level (FL)" when above transition altitude - 18,000ft in the U.S. Altitudes below the transition level are referenced in thousands of feet. For example: 6700' is "Six-Thousand Seven-Hundred" and 17,900' is "One Seven-Thousand Nine-Hundred". Thanks, and have a good flight!"</td></tr>
-            <tr><td class="command">.pushpd</td><td>Push: ATIS says PD</td><td>"Hi! Your PDC and/or the airport ATIS includes a note that gate push and engine start at this airport are at pilot's direction. Unless otherwise informed by PDC or ATIS, there is no need to contact ATC for permission to push and start in the non-movement area. You should contact ATC when ready to taxi to the assigned runway. It's also helpful to state the ATIS information code upon initial contact. Thanks for flying with us!"</td></tr>
-            <tr><td class="command">.pushcall</td><td>Push: ATIS says call controller</td><td>"Hi! It looks like you have pushed onto an ATC-controlled area (movement area) without instruction. Some airports in ZHU have gate areas adjacent to taxiways, actively controlled ramps/alleys, or other controlled areas of pavement. Please make sure you check Airport Diagrams, ATIS information, or your PDC and contact the appropriate controller before pushing back into these areas next time. We appreciate your help!"</td></tr>
+            <tr><td class="command">.WALLPC</td><td>Wallop indicating the pilot is unable to maintain control or command of aircraft</td></tr>
+            <tr><td class="command">.WALLCH</td><td>Wallop indicating the pilot is unable to follow charted procedures as directed/planned</td></tr>
+            <tr><td class="command">.WALLHM</td><td>Wallop indicating the pilot has a stuck mic and isn't responding</td></tr>
+            <tr><td class="command">.WALLNORDO ####</td><td>Wallop for NORDO aircraft, first contact-me sent at ####Z</td></tr>
+            <tr><td class="command">.WALLNORDOX ####</td><td>Wallop for NORDO aircraft, first contact-me sent at ####Z, will be conflict soon</td></tr>
+            <tr><td class="command">.WALLCACA</td><td>Wallop for NORDO aircraft, is immediate conflict</td></tr>
         </tbody>
     </table>
+    
+    <table>
+        <thead>
+            <tr><th colspan=2>Flight Plan Missing</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.PLAN</td><td>No flight plan with connected callsign.</td></tr>
+            <tr><td class="command">.PLANC</td><td>Similar, but not same callsign on submitted flight plan</td></tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <thead>
+            <tr><th colspan="2">Bad Flight Plan Information</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.BADCALL ###</td><td>Chosen callsign is not the same as real-world airline (###)</td></tr>
+            <tr><td class="command">.BADREG</td><td>Chosen registration does not comply with U.S.-registrered aircraft standards</td></tr>
+            <tr><td class="command">.BADEQ</td><td>Invalid or incorrect ICAO equipment suffix</td></tr>
+            <tr><td class="command">.BADTYPE</td><td>Invalid or incorrect aircraft type</td></tr>
+            <tr><td class="command">.BADTYPE2 ####</td><td>Invalid or incorrect aircraft type, the correct type is ####</td></tr>
+            <tr><td class="command">.BADPROC</td><td>Missing SID/STAR in flight plan. Links to IFR Route analyzer</td></tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr><th colspan=2>Bad Spawn</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.BADRWY</td><td>Spawned on runway</td></tr>
+            <tr><td class="command">.BADTWY</td><td>Spawned on taxiway</td></tr>
+        </tbody>
+    </table>
+    
+    <table>
+        <thead>
+            <tr><th colspan=2>Unauthorized Movements</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.BADPUSH</td><td>Pushed without permission</td></tr>
+            <tr><td class="command">.BADTAXI</td><td>Taxi without permission</td></tr>
+            <tr><td class="command">.BADTWR</td><td>Takeoff without permission</td></tr>
+            <tr><td class="command">.BADAIR</td><td>In controlled airspace</td></tr>
+            <tr><td class="command">.BADMODEC</td><td>Informs pilot that Mode C is required at the airport</td></tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr><th colspan="2">Bad Pilot Phraseology</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.BADFL</td><td>Pilot incorrectly used "flight level" when referencing altitude</td></tr>
+            <tr><td class="command">.BADALC</td><td>Requests the pilot includes altitude or flight level on initial contact</td></tr>
+            <tr><td class="command">.BADVFR</td><td>Informs pilot VFR flight information is not visible to ATC in the U.S. and requests they include more information on intial contact</td></tr>
+            <tr><td class="command">.BADRC</td><td>Radio calls are not needed</td></tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr><th colspan="2">Bad Procedure Compliance</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.BADALT</td><td>Pilot did not comply with altitude of procedure</td></tr>
+            <tr><td class="command">.BADDOF</td><td>Pilot did not comply with altitude for direction of flight</td></tr>
+            <tr><td class="command">.BADLAT</td><td>Pilot did not comply with lateral course of procedure</td></tr>
+            <tr><td class="command">.BADVEC</td><td>Pilot did not comply with vector segment of procedure</td></tr>
+            <tr><td class="command">.BADSPD</td><td>Pilot did not comply with published speed restriction</td></tr>
+            <tr><td class="command">.BADTURN</td><td>Pilot did not comply with direction of IAH departure turn</td></tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr><th colspan="2">Pilot Resources</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="command">.PILOT</td><td>Sends link to VATSIM Pilot Resource Center</td></tr>
+            <tr><td class="command">.CHARTD</td><td>Sends link to charts for departure airport</td></tr>
+            <tr><td class="command">.CHARTA</td><td>Sends link to charts for arrival airport</td></tr>
+            <tr><td class="command">.CHARTS K###</td><td>Sends link to charts for specified airport (K###)</td></tr>
+            <tr><td class="command">.CHARTDD</td><td>Sends link to airport diagram for departure airport</td></tr>
+            <tr><td class="command">.CHARTAD</td><td>Sends link to airport diagram to arrival airport</td></tr>
+            <tr><td class="command">.CHARTSD K###</td><td>Sends link to airport diagram for specified airport (K###)</td></tr>
+            <tr><td class="command">.AIP K###</td><td>Sends link to VATSIM AIP for specified airport (K###)</td></tr>
+        </tbody>
+    </table>
+
 </div>
 
 <button class="collapsible"><span class="arrow">►</span> Autotrack</button>
